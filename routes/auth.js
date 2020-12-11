@@ -3,6 +3,18 @@ const passport = require('../config/ppConfig');
 const db = require('../models')
 const router = express.Router();
 
+
+// this is authorizing the app to view user data, can add more if needed
+router.get('/strava',
+  passport.authenticate('strava', {scope:['activity:read']}));
+
+router.get('/strava/callback', 
+  passport.authenticate('strava', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+
 router.get('/signup', (req, res) => {
   res.render('auth/signup');
 });
