@@ -6,13 +6,13 @@ const router = express.Router();
 
 // this is authorizing the app to view user data, can add more if needed
 router.get('/strava',
-  passport.authenticate('strava', {scope:['activity:read']}));
+  passport.authenticate('strava', {scope:['activity:read_all']}));
 
 router.get('/strava/callback', 
   passport.authenticate('strava', { failureRedirect: '/login' }),
   function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
+    // Successful authentication, redirect to profile.
+    res.redirect('/profile');
   });
 
 router.get('/signup', (req, res) => {

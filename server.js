@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/profile', isLoggedIn, (req, res) => {
+app.get('/profile', (req, res) => {
   res.render('profile');
 });
 
