@@ -1,20 +1,20 @@
 const { compareSync } = require('bcrypt');
 const express = require('express');
 const router = express.Router();
+const  db = require("../models");
 const strava = require('strava-v3');
-const axios = require('axios'); 
-const isLoggedIn = require('../middleware/isLoggedIn') 
+const axios = require('axios');  
 
 // reading a file with no api
 var fs = require('fs');
 
-//testing json file 
-router.get('/', (req,res) => {
+// testing route
+router.get('/', (req, res) => {
     let activities = fs.readFileSync('./activities.json')
     let activityData = JSON.parse(activities)
-    console.log('hey there')
-    res.render('profile', { activity: activityData[0] })
-})
+    console.log('first activity', activityData[0].name)
+  res.render('profile', { activity: activityData[0] })
+  });
 
 
 

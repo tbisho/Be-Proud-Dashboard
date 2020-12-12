@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const  db = require("../models");
 const strava = require('strava-v3');
-const axios = require('axios');  
+const axios = require('axios');
 
 // reading a file with no api
 var fs = require('fs');

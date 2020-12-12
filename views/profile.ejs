@@ -11,11 +11,15 @@
 <table class='striped responsive-table'>
         <tr>
             <th>Sport</th>
-            <th>Date</th>
+            <!-- <th>Date</th> -->
             <th>Title</th>
             <th>Time</th>
             <th>Distance</th>
             <th>Elevation</th>
         </tr>
-        <td></td>
+        <td><%= activity.type %></td>
+        <td><%= activity.name %></td>
+        <td><%= activity.moving_time %></td>
+        <td><%= activity.distance %></td>
+        <td><%= activity.total_elevation_gain %></td>
 </table>
