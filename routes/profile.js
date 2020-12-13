@@ -9,13 +9,18 @@ const axios = require('axios');
 var fs = require('fs');
 
 // testing route
+
 router.get('/', (req, res) => {
     let activities = fs.readFileSync('./activities.json')
     let activityData = JSON.parse(activities)
+    let yearTotals = fs.readFileSync('./yearToDate.json')
+    yearData = JSON.parse(yearTotals)
     console.log('first activity', activityData[0].name)
-  res.render('profile', { activity: activityData[0] })
+    console.log(yearData.ytd_ride_totals)
+    res.render('profile', { activity: activityData[0], yearTotals: yearData })
   });
 
+  // {yearTotals: yearData}
 
 
 

@@ -11,19 +11,31 @@
     <div class="data-container">
         <div class="row">
             <div class="profileHeader">
-                <span class='margin-top'>My 2020 Roundup</span>
+                <span class='margin-top'> Be Proud Dashboard</span>
             </div>
-            <div class="col s6">
-                <p class='stats'>I covered</p>
-                <p class='dataLg'>250</p>
-                <p class='stats'>miles on my feet</p>
+            <div class='margin-top'>
+                <div class="profileImage col s12">
+                    <p> add image of user</p>
+                </div>
+                <p>powered by Strava</p>
+                <h3>This Year</h3>
+                <div class="col s4">
+                    <p class='stats'>I ran</p>
+                    <p class='dataLg'><%= yearData.ytd_run_totals.distance %></p>
+                    <p class='stats'>miles </p>
+                </div>
+                <div class="col s4">
+                    <p class='stats'>Elevation climbed</p>
+                    <p class='dataLg'><%= yearData.ytd_ride_totals.elevation_gain %></p>
+                    <p class='stats'> feet on my bike</p>
+                </div>
+                <div class="col s4">
+                    <p class='stats'>I swam</p>
+                    <p class='dataLg'><%= yearData.ytd_swim_totals.distance %></p>
+                    <p class='stats'>miles</p>
+                </div>
             </div>
-            <div class="col s6">
-                <p class='stats'>Elevation climbed</p>
-                <p class='dataLg'>10,000</p>
-                <p class='stats'>feet</p>
-            </div>
-            <div class="col s6">
+            <!-- <div class="col s4">
                 <p class="pr-header">personal records</p>
                 <p class='pr'>whoa</p>
                 <p class='pr'>whoa</p>
@@ -32,13 +44,13 @@
                 <p class='pr'>whoa</p>
                 <p class='pr'>whoa</p>
             </div>
-            <div class="col s6">
+            <div class="col s3">
                 <p class="pr-header">Top Activity Types</p>
                 <p class='pr'>run</p>
                 <p class='pr'>bike</p>
                 
             </div>
-            <div class="col s6">
+            <div class="col s3">
                 <p class="pr-header">routes with top distances traveled</p>
                 <p class='pr'>route name</p>
                 <p class='pr'>route name</p>
@@ -46,10 +58,10 @@
                 <p class='pr'>route name</p>
                
             </div>
-            <div class="col s6">
+            <div class="col s3">
                 <p class="pr-header">another stat</p>
                 <p class='pr'>stat</p>
-            </div>
+            </div> -->
           </div>     
     </div>
 </section>
