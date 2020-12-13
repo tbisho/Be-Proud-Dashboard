@@ -22,8 +22,8 @@ router.get('/', (req, res) => {
 // TESTING API CONNECTION
 // router.get('/', function(req,res) {
 //   // get athlete stats
-//   const athleteUrl = "https://www.strava.com/api/v3/athlete/activities?before=&after=&page=&per_page=?access_token=fe9fc712776f9d108a439b35c6c7f9a9e55bc69b"
-//     axios.get(athleteUrl, { withCredentials: true })
+//   const athleteUrl = "https://www.strava.com/api/v3/athlete/activities?before=&after=&page=&per_page=?access_token=18cba95a3d1772ebca4148dd5bee0b471085c62d "
+//     axios.get(athleteUrl)
 //     .then( function(apiResponse) {
 //     console.log(apiResponse)
 //     res.render('profile')
