@@ -111,3 +111,7 @@ p {
 .profileImage{
 	margin-bottom: 5em;
 }
+
+.flex-wrapper {
+	display: flex;
+}
