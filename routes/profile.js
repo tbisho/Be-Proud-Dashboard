@@ -14,10 +14,17 @@ router.get('/', (req, res) => {
     let activities = fs.readFileSync('./activities.json')
     let activityData = JSON.parse(activities)
     let yearTotals = fs.readFileSync('./yearToDate.json')
+    let profileInfo = fs.readFileSync('./profileInfo.json')
+    let profileData = JSON.parse(profileInfo)
+
+
+
+
     yearData = JSON.parse(yearTotals)
     console.log('first activity', activityData[0].name)
     console.log(yearData.ytd_ride_totals)
-    res.render('profile', { activity: activityData[0], yearTotals: yearData })
+    console.log('profile info:', profileData.profile_medium)
+    res.render('profile', { activity: activityData[0], yearTotals: yearData, profileInfo: profileData })
   });
 
   // {yearTotals: yearData}

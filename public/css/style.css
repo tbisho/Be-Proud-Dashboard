@@ -11,7 +11,7 @@ body {
 	letter-spacing: .02em;
 	text-align: center;
 	color: #44545E;
-	line-height: 3em;
+	/* line-height: 3em; */
 }
 h1 {
   color: black;
@@ -53,7 +53,7 @@ header {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 100vh;
+	height: 130vh;
 	width: 100vw;
 	
 }
@@ -77,12 +77,12 @@ line-height:5.2;
 margin:0 auto;
 }
 
-span {
+span{
 	transform: skew(20deg); 
   	display: block;	
 }
 
-.margin-top{
+.margin-top span{
 	margin-top: 20px;
 }
 
@@ -121,9 +121,27 @@ p {
 	margin-bottom: 5em;
 }
 
+.profile-pic {
+	width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 
 @media (max-width: 1097px) {
 	h3 {
 		display: none; 
 	}
   }
+
+profileDetails {
+	line-height: 2px;
+}
+
+button {
+	margin: 1em;
+}
+
+.collection p {
+	color: black;
+	font-style: normal;
+}
