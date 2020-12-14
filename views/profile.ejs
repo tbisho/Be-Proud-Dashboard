@@ -35,50 +35,41 @@
                         <p class='stats'>miles</p>
                     </div> 
             </div>
-            <!-- <div class="col s4">
-                <p class="pr-header">personal records</p>
-                <p class='pr'>whoa</p>
-                <p class='pr'>whoa</p>
-                <p class='pr'>whoa</p>
-                <p class='pr'>whoa</p>
-                <p class='pr'>whoa</p>
-                <p class='pr'>whoa</p>
-            </div>
-            <div class="col s3">
-                <p class="pr-header">Top Activity Types</p>
-                <p class='pr'>run</p>
-                <p class='pr'>bike</p>
-                
-            </div>
-            <div class="col s3">
-                <p class="pr-header">routes with top distances traveled</p>
-                <p class='pr'>route name</p>
-                <p class='pr'>route name</p>
-                <p class='pr'>route name</p>
-                <p class='pr'>route name</p>
-               
-            </div>
-            <div class="col s3">
-                <p class="pr-header">another stat</p>
-                <p class='pr'>stat</p>
-            </div> -->
           </div>     
     </div>
 </section>
 
-<h3>Recent Activities</h3>
-<table class='striped responsive-table'>
-        <tr>
-            <th>Sport</th>
-            <!-- <th>Date</th> -->
-            <th>Title</th>
-            <th>Time</th>
-            <th>Distance</th>
-            <th>Elevation</th>
-        </tr>
-        <td><%= activity.type %></td>
-        <td><%= activity.name %></td>
-        <td><%= activity.moving_time %></td>
-        <td><%= activity.distance %></td>
-        <td><%= activity.total_elevation_gain %></td>
-</table>
+<div>
+    <h3>Recent Activities</h3>
+        <table class='striped responsive-table'>
+                <tr>
+                    <th>Sport</th>
+                    <!-- <th>Date</th> -->
+                    <th>Title</th>
+                    <th>Time</th>
+                    <th>Distance</th>
+                    <th>Elevation</th>
+                </tr>
+                <tr>
+                    <td><%= activity.type %></td>
+                    <td><%= activity.name %></td>
+                    <td><%= activity.moving_time %></td>
+                    <td><%= activity.distance %></td>
+                    <td><%= activity.total_elevation_gain %></td>
+                 </tr>
+                 <tr>
+                    <td><%= activity.type %></td>
+                    <td><%= activity.name %></td>
+                    <td><%= activity.moving_time %></td>
+                    <td><%= activity.distance %></td>
+                    <td><%= activity.total_elevation_gain %></td>
+                 </tr>
+                 <tr>
+                    <td><%= activity.type %></td>
+                    <td><%= activity.name %></td>
+                    <td><%= activity.moving_time %></td>
+                    <td><%= activity.distance %></td>
+                    <td><%= activity.total_elevation_gain %></td>
+                 </tr>
+        </table>
+</div>

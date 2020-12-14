@@ -40,13 +40,22 @@ h1, h2, h3, h4 {
 header {
 	background-image: url('../images/1600.jpg');
 	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	height: 100vh;
+	width: auto;
 }
 
 .profile {
 	background-image: url('../images/pool.jpg');
 	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	height: 100vh;
+	width: 100vw;
+	
 }
 
 .profileHeader {
@@ -112,6 +121,9 @@ p {
 	margin-bottom: 5em;
 }
 
-.flex-wrapper {
-	display: flex;
-}
+
+@media (max-width: 1097px) {
+	h3 {
+		display: none; 
+	}
+  }
