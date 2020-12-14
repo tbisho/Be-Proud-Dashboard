@@ -13,7 +13,7 @@
     <div class="data-container">
         <div class="row">
             <div class="profileHeader">
-            <span class='margin-top'> Be Proud Dashboard</span>
+            <span class='margin-top skew-title'> Be Proud Dashboard</span>
             </div>
             <div class='margin-top'>
                 <div class="profileDetails col s12">
@@ -38,10 +38,7 @@
                         <p class='dataLg'><%= yearData.ytd_swim_totals.distance %></p>
                         <p class='stats'>miles</p>
                     </div> 
-                    <div class="col s12 m12 l12">
-                        <p class='dataLg'> Your Top 5</p>
-                        <!-- <p class='stats'>Sport: blah Title: Blah</p> -->
-                    </div> 
+                    
             </div>
         </div>     
     </div>
@@ -49,71 +46,45 @@
 
 <ul class="collection">
     <li class="collection-item avatar">
-      <img src="images/yuna.jpg" alt="" class="circle">
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
+        <i class="material-icons circle green">insert_chart</i>
+        <span class="title">Title</span>
+        <p>Sport: <br>
+           Name:
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+      </li>
     <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
+      <i class="material-icons circle green">insert_chart</i>
       <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
+      <p>Sport: <br>
+         Name:
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">insert_chart</i>
       <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
+      <p>Sport: <br>
+         Name:
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
+      <i class="material-icons circle green">insert_chart</i>
       <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
+      <p>Sport: <br>
+         Name:
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
+    <li class="collection-item avatar">
+        <i class="material-icons circle green">insert_chart</i>
+        <span class="title">Title</span>
+        <p>Sport: <br>
+            Name:
+        </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+      </li>
   </ul>
 
 
-<div>
-    <h3>Recent Activities</h3>
-        <table class='striped responsive-table'>
-                <tr>
-                    <th>Sport</th>
-                    <!-- <th>Date</th> -->
-                    <th>Title</th>
-                    <th>Time</th>
-                    <th>Distance</th>
-                    <th>Elevation</th>
-                </tr>
-                <tr>
-                    <td><%= activity.type %></td>
-                    <td><%= activity.name %> <button class="waves-effect waves-light btn-small">save to top 5</button></td>
-                    <td><%= activity.moving_time %></td>
-                    <td><%= activity.distance %></td>
-                    <td><%= activity.total_elevation_gain %></td>
-                 </tr>
-                 <tr>
-                    <td><%= activity.type %></td>
-                    <td><%= activity.name %></td>
-                    <td><%= activity.moving_time %></td>
-                    <td><%= activity.distance %></td>
-                    <td><%= activity.total_elevation_gain %></td>
-                 </tr>
-                 <tr>
-                    <td><%= activity.type %></td>
-                    <td><%= activity.name %></td>
-                    <td><%= activity.moving_time %></td>
-                    <td><%= activity.distance %></td>
-                    <td><%= activity.total_elevation_gain %></td>
-                 </tr>
-        </table>
-</div>

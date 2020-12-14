@@ -14,8 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   activity.init({
-    name: DataTypes.STRING,
-    userId: DataTypes.INTEGER
+    userId: DataTypes.INTEGER,
+    sport: DataTypes.STRING,
+    title: DataTypes.STRING,
+    time: DataTypes.INTEGER,
+    distance: DataTypes.INTEGER,
+    elevation: DataTypes.INTEGER,
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'activity',

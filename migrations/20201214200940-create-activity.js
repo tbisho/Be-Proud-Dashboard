@@ -8,11 +8,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
       userId: {
         type: Sequelize.INTEGER
+      },
+      sport: {
+        type: Sequelize.STRING
+      },
+      title: {
+        type: Sequelize.STRING
+      },
+      time: {
+        type: Sequelize.INTEGER
+      },
+      distance: {
+        type: Sequelize.INTEGER
+      },
+      elevation: {
+        type: Sequelize.INTEGER
+      },
+      image: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
