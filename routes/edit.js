@@ -15,16 +15,18 @@ router.get('/', function(req, res) {
     console.log(req.user.access_token)
     console.log("~~~~~~~~~~~~~~~~~~~~~")
   
-    const activityUrl = `https://www.strava.com/api/v3/activities/${3656336289}?access_token=b1c42a0facc330aa887ef04a35305df7027beb77`
-  
+    const activityUrl = `https://www.strava.com/api/v3/activities/${3656336289}?access_token=3e01537804ac7b740821520923f0e93e6ac734a3`
+    console.log(req.body.name) 
     axios.put(activityUrl,
       {
         headers: {
           "Authorization": `Bearer ${req.user.access_token}`
         }, 
-       name: req.body
+       
+       name: "why won't this work with req.body"
       }).then(function(apiResponse) {
         // console.log('FIRST', apiResponse)
+        //send back to activities page
         res.render('edit')
       })
     });
