@@ -11,6 +11,7 @@ passport.use(new StravaStrategy({
   callbackURL: "http://127.0.0.1:3000/auth/strava/callback"
 },
 function(accessToken, refreshToken, profile, done) {
+    console.log(profile)
     db.user.findOrCreate({
       where: { strava_id: profile.id },
       defaults: {
@@ -22,6 +23,8 @@ function(accessToken, refreshToken, profile, done) {
       console.log(accessToken);
       user[0].access_token = accessToken;
       await user[0].save()
+      // if profile doesn't match the db update it
+
     
     // To keep the example simple, the user's Strava profile is returned to
     // represent the logged-in user.  In a typical application, you would want

@@ -49,23 +49,9 @@ axios.get(statsUrl,
   })
 });
   
-//   axios.all([
-//     axios.get(athleteUrl,
-//   {
-//     headers: {
-//       "Authorization": `Bearer ${req.user.access_token}`
-//     }
-//   }),
-//   axios.get('https://www.strava.com/api/v3/athletes')
-// ]).then(axios.spread((...responses) => {
-//   console.log(...reponses)
-// })
-
-// .then(axios.spread((apiResponse1, apiResponse2) => {
-//     // console.log(apiResponse1, apiResponse2)
-//     res.render('profile', { yearTotals: apiResponse1.data })
-
-// }))
+//add to DB - profile pic
+// add new DB field 
+// modify table & migrations
 
 
 module.exports = router;
