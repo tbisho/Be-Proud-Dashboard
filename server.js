@@ -45,6 +45,7 @@ app.get('/', (req, res) => {
 app.use('/auth', require('./routes/auth'));
 app.use('/activities', require('./routes/activities'));
 app.use('/profile', require('./routes/profile'));
+app.use('/edit', require('./routes/edit'))
 
 
 

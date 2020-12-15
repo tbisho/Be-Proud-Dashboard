@@ -3,38 +3,6 @@ const passport = require('passport');
 const db = require('../models');
 // require strava strategy
 const StravaStrategy = require('passport-strava-oauth2').Strategy
-/*
- * Passport "serializes" objects to make them easy to store, converting the
- * user to an identifier (id)
- */
-// passport.serializeUser((user, cb) => {
-//   cb(null, user.id);
-// });
-
-// /*
-//  * Passport "deserializes" objects by taking the user's serialization (id)
-//  * and looking it up in the database
-//  */
-// passport.deserializeUser((id, cb) => {
-//   db.user.findByPk(id).then(user => {
-//     cb(null, user);
-//   }).catch(cb);
-// });
-
-// passport.use(new LocalStrategy({
-//   usernameField: 'email',
-//   passwordField: 'password'
-// }, (email, password, cb) => {
-//   db.user.findOne({ 
-//     where: { email }
-//   }).then(user => {
-//     if (!user || !user.validPassword(password)) {
-//       cb(null, false);
-//     } else {
-//       cb(null, user);
-//     }
-//   }).catch(cb);
-// }));
 
 // Strava Strategy
 passport.use(new StravaStrategy({
