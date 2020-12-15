@@ -18,24 +18,26 @@
             </div>
             <div class='margin-top'>
                 <div class="profileDetails col s12">
-                    <p><img class="profile-pic" src="<%= profileInfo.profile_medium %>"></p>
+                    <!-- profile pic  -->
+                    <p><img class="profile-pic" src=""></p>
                     
                 </div>
                 
                 <h3>This Year</h3>
                     <div class="col s12 m12 l4">
                         <p class='stats'>I ran</p>
-                        <p class='dataLg'><%= yearData.ytd_run_totals.distance %></p>
+                        <!-- total miles ran -->
+                        <p class='dataLg'><%= Math.floor(yearTotals.ytd_run_totals.distance / 1609) %></p>
                         <p class='stats'>miles </p>
                     </div>
                     <div class="col s12 m12 l4">
                         <p class='stats'>Elevation climbed</p>
-                        <p class='dataLg'><%= yearData.ytd_ride_totals.elevation_gain %></p>
+                        <p class='dataLg'><%= yearTotals.ytd_ride_totals.elevation_gain %></p>
                         <p class='stats'> feet on my bike</p>
                     </div>
                     <div class="col s12 m12 l4">
                         <p class='stats'>I swam</p>
-                        <p class='dataLg'><%= yearData.ytd_swim_totals.distance %></p>
+                        <p class='dataLg'><%= yearTotals.ytd_swim_totals.distance %></p>
                         <p class='stats'>miles</p>
                     </div> 
                     
