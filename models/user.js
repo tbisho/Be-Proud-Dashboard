@@ -48,6 +48,15 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
+    profileImage: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [1, 99],
+          msg: 'Must be a valid URL'
+        }
+      }
+    },
     strava_id: DataTypes.INTEGER,
     access_token: DataTypes.STRING
   }, {

@@ -8,46 +8,29 @@ const axios = require('axios');
 // reading a file with no api
 var fs = require('fs');
 
-// testing route
-
-// router.get('/', (req, res) => {
-//     let activities = fs.readFileSync('./activities.json')
-//     let activityData = JSON.parse(activities)
-//     let yearTotals = fs.readFileSync('./yearToDate.json')
-//     let profileInfo = fs.readFileSync('./profileInfo.json')
-//     let profileData = JSON.parse(profileInfo)
-
-
-
-
-//     yearData = JSON.parse(yearTotals)
-//     console.log('first activity', activityData[0].name)
-//     console.log(yearData.ytd_ride_totals)
-//     console.log('profile info:', profileData.profile_medium)
-//     res.render('profile', { activity: activityData[0], yearTotals: yearData, profileInfo: profileData })
-//   });
-
-  // {yearTotals: yearData}
-
-
-
 
 router.get('/', function(req,res) {
 
 // get athlete stats
 console.log('hitting route?')
 const statsUrl = "https://www.strava.com/api/v3/athletes/47183122/stats"
+console.log('user id', req.currentUser)
 
-axios.get(statsUrl,
-  {
-    headers: {
-      "Authorization": `Bearer ${req.user.access_token}`
-    }
-  }).then(function(apiResponse) {
-    // console.log('FIRST', apiResponse)
-    res.render('profile', { yearTotals: apiResponse.data})
-  })
-});
+db.user.findByPk(req.user.id).then(function(response){
+  console.log('profile photo', response)
+  axios.get(statsUrl,
+    {
+      headers: {
+        "Authorization": `Bearer ${req.user.access_token}`
+      }
+    }).then(function(apiResponse) {
+      // console.log('FIRST', apiResponse)
+      res.render('profile', { yearTotals: apiResponse.data, profileImage: response.profileImage})
+    })
+  });
+})
+
+
   
 //add to DB - profile pic
 // add new DB field 

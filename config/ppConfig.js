@@ -11,13 +11,14 @@ passport.use(new StravaStrategy({
   callbackURL: "http://127.0.0.1:3000/auth/strava/callback"
 },
 function(accessToken, refreshToken, profile, done) {
-    console.log(profile)
+    console.log('my image url', profile._json.profile_medium)
     db.user.findOrCreate({
       where: { strava_id: profile.id },
       defaults: {
         name: profile.displayName,
-        email: "someEmail@email.com",
-        strava_id: profile.id
+        email: "aEmail@email.com",
+        strava_id: profile.id,
+        profileImage: profile._json.profile_medium
       }
     }).then(async user => {
       console.log(accessToken);
