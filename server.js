@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const layouts = require('express-ejs-layouts');
 const session = require('express-session')
+const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
@@ -10,6 +11,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.use(require('morgan')('dev'));
+app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);

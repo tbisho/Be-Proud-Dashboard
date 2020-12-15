@@ -9,11 +9,14 @@ router.get('/strava',
   passport.authenticate('strava', {scope:['activity:read_all']}));
 
 router.get('/strava/callback', 
-  passport.authenticate('strava', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect to profile.
-    res.redirect('/profile');
-  });
+  passport.authenticate('strava', 
+    { 
+      failureRedirect: '/login', 
+      successRedirect: '/profile'
+    }
+  )
+);
+  
 
 router.get('/signup', (req, res) => {
   res.render('auth/signup');

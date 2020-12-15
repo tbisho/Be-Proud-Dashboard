@@ -14,7 +14,10 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      password: {
+      strava_id: {
+        type: Sequelize.INTEGER
+      },
+      access_token: {
         type: Sequelize.STRING
       },
       createdAt: {

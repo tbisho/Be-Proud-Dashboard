@@ -1,34 +1,24 @@
-<div>
-    <h3>Recent Activities</h3>
-        <table class='striped responsive-table'>
-                <tr>
-                    <th>Sport</th>
-                    <!-- <th>Date</th> -->
-                    <th>Title</th>
-                    <th>Time</th>
-                    <th>Distance</th>
-                    <th>Elevation</th>
-                </tr>
-                <tr>
-                    <td><%= activity.type %></td>
-                    <td><%= activity.name %> <button class="waves-effect waves-light btn-small">save to top 5</button></td>
-                    <td><%= activity.moving_time %></td>
-                    <td><%= activity.distance %></td>
-                    <td><%= activity.total_elevation_gain %></td>
-                 </tr>
-                 <tr>
-                    <td><%= activity.type %></td>
-                    <td><%= activity.name %></td>
-                    <td><%= activity.moving_time %></td>
-                    <td><%= activity.distance %></td>
-                    <td><%= activity.total_elevation_gain %></td>
-                 </tr>
-                 <tr>
-                    <td><%= activity.type %></td>
-                    <td><%= activity.name %></td>
-                    <td><%= activity.moving_time %></td>
-                    <td><%= activity.distance %></td>
-                    <td><%= activity.total_elevation_gain %></td>
-                 </tr>
-        </table>
-</div>
+<h1>Look at all this</h1>
+
+<table class="responsive-table highlight">
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Distance</th>
+          <th>Elevation Gain</th>
+          <th>PR Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% activity.forEach(function(activity) { %>
+      <tr>
+        <td><%= activity.name %> <button class= "waves-effect waves-light btn-small">edit</button></td>
+        <td><%= activity.type %></td>
+        <td><%= activity.distance %></td>
+        <td><%= activity.total_elevation_gain %></td>
+        <td><%= activity.pr_count %></td>
+      <% }); %>
+    </tbody>
+  </table>
+  <h1>Why are you so awesome</h1>

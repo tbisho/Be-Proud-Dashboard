@@ -10,21 +10,22 @@ var fs = require('fs');
 
 // testing route
 
-router.get('/', (req, res) => {
-    let activities = fs.readFileSync('./activities.json')
-    let activityData = JSON.parse(activities)
-    let yearTotals = fs.readFileSync('./yearToDate.json')
-    let profileInfo = fs.readFileSync('./profileInfo.json')
-    let profileData = JSON.parse(profileInfo)
+router.get('/', function(req, res) {
+  console.log("~~~~~~~~~~~~~~~~~~~~~")
+  console.log(req.user.access_token)
+  console.log("~~~~~~~~~~~~~~~~~~~~~")
 
+  const athleteUrl = "https://www.strava.com/api/v3/athlete/activities"
 
-
-
-    yearData = JSON.parse(yearTotals)
-    console.log('first activity', activityData[0].name)
-    console.log(yearData.ytd_ride_totals)
-    console.log('profile info:', profileData.profile_medium)
-    res.render('activities', { activity: activityData[0], yearTotals: yearData, profileInfo: profileData })
+  axios.get(athleteUrl,
+    {
+      headers: {
+        "Authorization": `Bearer ${req.user.access_token}`
+      }
+    }).then(function(apiResponse) {
+      console.log('FIRST', apiResponse.data[0])
+      res.render('activities', { activity: apiResponse.data})
+    })
   });
 
   module.exports = router;
