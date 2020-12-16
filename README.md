@@ -21,7 +21,7 @@ I created this app to gain experience with Oauth authentication. I was able to u
 | updatedAt | Date | Auto-generated |
 
 ### Wire Frames
-![Landing](/images/landingWire.png)
+![Landing](public/images/landingWire.png)
 ![Profile](/images/profileWire.png)
 ![Activity](/images/activityWire.png)
 
