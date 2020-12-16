@@ -24,7 +24,7 @@ router.put('/:activity_id', function(req, res) {
   // remove hard coded ID
   // 
   console.log('these are the params', req.params)
-    let activityUrl = `https://www.strava.com/api/v3/activities/${req.params.activity_id}?access_token=256b332b1340290eb9b13a0a064b702476b10d15`
+    let activityUrl = `https://www.strava.com/api/v3/activities/${req.params.activity_id}?access_token=ba68f018f4f5b44e69ab96352d4eda047b58383c`
      
     axios.put(activityUrl,
       {

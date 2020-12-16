@@ -9,21 +9,16 @@
 
 
 <!-- pull activity data and look through -->
+<div class='margin-top'>
 
 <section class=" profile">
     <div class="data-container">
+        
         <div class="row">
             <div class="profileHeader">
             <span class='margin-top skew-title'> Be Proud Dashboard</span>
             </div>
-            <div class='margin-top'>
-                <div class="profileDetails col s12">
-                    <!-- src will be updated from the DB -->
-                    <p><img class="profile-pic" src="<%= profileImage %>"></p>
-                    
-                </div>
-                
-                <h3>This Year</h3>
+                <h3 class='tweak'>This Year</h3>
                     <div class="col s12 m12 l4">
                         <p class='stats'>Elevation climbed</p>
                         <%console.log(yearTotals)%>
@@ -49,7 +44,7 @@
                         <p class='stats'>I swam</p>
                         <p class='dataLg'><%= yearTotals.ytd_swim_totals.distance %></p>
                         <p class='stats'>miles</p>
-                        <p class="goalAlert"><% if (yearTotals.ytd_swim_totals.elevation_gain === 0) { %>
+                        <p class="goalAlert"><% if (yearTotals.ytd_ride_totals.elevation_gain === 0) { %>
                             <%= "Time so start setting some goals!" %>
                             <% } %></p>
                     </div> 

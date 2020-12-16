@@ -11,9 +11,9 @@ var fs = require('fs');
 // testing route
 
 router.get('/', function(req, res) {
-  // console.log("~~~~~~~~~~~~~~~~~~~~~")
-  // console.log(req.user.access_token)
-  // console.log("~~~~~~~~~~~~~~~~~~~~~")
+  console.log("~~~~~~~~~~~~~~~~~~~~~")
+  console.log(req.user.access_token)
+  console.log("~~~~~~~~~~~~~~~~~~~~~")
 
   const athleteUrl = "https://www.strava.com/api/v3/athlete/activities"
   
@@ -23,7 +23,6 @@ router.get('/', function(req, res) {
         "Authorization": `Bearer ${req.user.access_token}`
       }
     }).then(function(apiResponse) {
-      console.log(apiResponse)
       res.render('activities', { activity: apiResponse.data})
     })
   });
