@@ -16,7 +16,7 @@ router.get('/', function(req,res) {
 
 
 
-router.put('/', function(req, res) {
+router.put('/:id', function(req, res) {
     console.log("~~~~~~~~~~~~~~~~~~~~~")
     console.log(req.user.access_token)
     console.log("~~~~~~~~~~~~~~~~~~~~~")
