@@ -16,15 +16,14 @@ router.get('/', function(req,res) {
 
 
 
-router.put('/:id', function(req, res) {
-    console.log("~~~~~~~~~~~~~~~~~~~~~")
+router.put('/', function(req, res) {
+    console.log("should be current token~~~~~~~~~~~~~~~~~~~~~")
     console.log(req.user.access_token)
     console.log("~~~~~~~~~~~~~~~~~~~~~")
   // next steps
   // remove hard coded ID
   // 
-    const activityUrl = `https://www.strava.com/api/v3/activities/${3656336289}?access_token=
-    8bf8609942377bb20e5b2131500f82a225f73c73`
+    const activityUrl = `https://www.strava.com/api/v3/activities/${3656336289}?access_token=8bf8609942377bb20e5b2131500f82a225f73c73`
     console.log(req.body) 
     axios.put(activityUrl,
       {
