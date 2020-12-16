@@ -33,7 +33,7 @@ I created this app to gain experience with Oauth authentication. I was able to u
 
 ### Code Captures
 ![Strategy](public/images/stravaStrategy.png)
-![Auth](public/authRoute.png)
+![Auth](public/images/authRoute.png)
 
 ### About Me
 

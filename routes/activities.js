@@ -23,8 +23,7 @@ router.get('/', function(req, res) {
         "Authorization": `Bearer ${req.user.access_token}`
       }
     }).then(function(apiResponse) {
-      // console.log('FIRST', apiResponse)
-      console.log('id should be here', apiResponse.data.id)
+      console.log(apiResponse)
       res.render('activities', { activity: apiResponse.data})
     })
   });

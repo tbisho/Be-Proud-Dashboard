@@ -9,22 +9,22 @@ const axios = require('axios');
 //middleware
 router.use(methodOverride('_method'))
 
-
-router.get('/', function(req,res) {
-  res.render('edit')
+// pass the id back to the edit.ejs 
+router.get('/:activity_id', function(req,res) {
+  res.render('edit', { activityIdPizza: req.params.activity_id })
 })
 
 
 
-router.put('/:id', function(req, res) {
+router.put('/:activity_id', function(req, res) {
     console.log("should be current token~~~~~~~~~~~~~~~~~~~~~")
     console.log(req.user.access_token)
     console.log("~~~~~~~~~~~~~~~~~~~~~")
   // next steps
   // remove hard coded ID
   // 
-  console.log(req.params)
-    const activityUrl = `https://www.strava.com/api/v3/activities/${req.params.activity.id}?access_token=8bf8609942377bb20e5b2131500f82a225f73c73`
+  console.log('these are the params', req.params)
+    let activityUrl = `https://www.strava.com/api/v3/activities/${req.params.activity_id}?access_token=256b332b1340290eb9b13a0a064b702476b10d15`
      
     axios.put(activityUrl,
       {
@@ -34,8 +34,7 @@ router.put('/:id', function(req, res) {
        
        name: req.body.name
       }).then(function(apiResponse) {
-        console.log('iddddd', apiResponse.id)
-        res.redirect('/activities', {id: apiResponse.id})
+        res.redirect('/activities')
       })
     });
   

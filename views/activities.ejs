@@ -1,4 +1,4 @@
-<nav>
+<nav class="deep-orange">
   <ul>
       <li><a href="/auth/logout">Logout</a>
       <li><a href="/activities">Activities</a>
@@ -28,10 +28,11 @@
         <td><%= activity.distance %></td>
         <td><%= activity.total_elevation_gain %></td>
         <td><%= activity.pr_count %></td>
-        <form method="GET" action="/edit/<%= activity.id %>">
-          <td><button type="submit">Edit</button></td>
-        </form>
+        <!-- this form only needs to pull the edit page, and send an ID to query params -->
+        <td><a href="/edit/<%= activity.id %>">Edit</a></td>
+          
       <% }); %>
     </tbody>
   </table>
   <h1>Why are you so awesome</h1>
+  <!-- <%= activity.id %> -->
