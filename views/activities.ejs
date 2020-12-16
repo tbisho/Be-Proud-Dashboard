@@ -23,11 +23,14 @@
     <tbody>
       <% activity.forEach(function(activity) { %>
       <tr>
-        <td><%= activity.name %> <button type='submit' action='/edit' class= "waves-effect waves-light btn-small">edit</button></td>
+        <td><%= activity.name %></td>
         <td><%= activity.type %></td>
         <td><%= activity.distance %></td>
         <td><%= activity.total_elevation_gain %></td>
         <td><%= activity.pr_count %></td>
+        <form method="GET" action="/edit">
+          <td><button type="submit">Edit</button></td>
+        </form>
       <% }); %>
     </tbody>
   </table>
