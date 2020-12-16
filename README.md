@@ -1,16 +1,12 @@
-# Express Authentication
+# Be Proud Dashboard
 
-Express authentication template using Passport + flash messages + custom middleware
+I created this app to gain experience with Oauth authentication. I was able to utilize the Strava API to create a 'yearly roundup' of a Strava users activities.
 
-## What it includes
+## User Stories
 
-* Sequelize user model / migration
-* Settings for PostgreSQL
-* Passport and passport-local for authentication
-* Sessions to keep user logged in between pages
-* Flash messages for errors and successes
-* Passwords that are hashed with BCrypt
-* EJS Templating and EJS Layouts
+* As a user, I would like to be able to log in with my Strava credentials
+* As a user, I would like to be able to view and update my Strava activity information
+
 
 ### User Model
 
@@ -18,22 +14,14 @@ Express authentication template using Passport + flash messages + custom middlew
 | --------------- | ------------- | ------------------------------ |
 | id | Integer | Serial Primary Key, Auto-generated |
 | name | String | Must be provided |
-| email | String | Must be unique / used for login |
-| password | String | Stored as a hash |
+| profileImage | String | 
+| strava_id | Integer | 
+| access_token | Integer | 
 | createdAt | Date | Auto-generated |
 | updatedAt | Date | Auto-generated |
 
-### Default Routes
-
-| Method | Path | Location | Purpose |
-| ------ | ---------------- | -------------- | ------------------- |
-| GET | / | server.js | Home page |
-| GET | /auth/login | auth.js | Login form |
-| GET | /auth/signup | auth.js | Signup form |
-| POST | /auth/login | auth.js | Login user |
-| POST | /auth/signup | auth.js | Creates User |
-| GET | /auth/logout | auth.js | Removes session info |
-| GET | /profile | server.js | Regular User Profile |
+### Wire Frames
+![Activity] (../images/activityWire.png)
 
 ## Steps To Use
 

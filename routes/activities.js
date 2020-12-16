@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
   // console.log("~~~~~~~~~~~~~~~~~~~~~")
 
   const athleteUrl = "https://www.strava.com/api/v3/athlete/activities"
-
+  
   axios.get(athleteUrl,
     {
       headers: {
@@ -24,6 +24,7 @@ router.get('/', function(req, res) {
       }
     }).then(function(apiResponse) {
       // console.log('FIRST', apiResponse)
+      console.log('id should be here', apiResponse.data.id)
       res.render('activities', { activity: apiResponse.data})
     })
   });
