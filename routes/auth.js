@@ -4,7 +4,7 @@ const db = require('../models')
 const router = express.Router();
 
 
-// this is authorizing the app to view user data, can add more if needed
+// this is authorizing the app to view user data
 router.get('/strava',
   passport.authenticate('strava', {scope:['activity:read_all,activity:write']}));
 
