@@ -23,7 +23,8 @@ router.put('/', function(req, res) {
   // next steps
   // remove hard coded ID
   // 
-    const activityUrl = `https://www.strava.com/api/v3/activities/${3656336289}?access_token=3e01537804ac7b740821520923f0e93e6ac734a3`
+    const activityUrl = `https://www.strava.com/api/v3/activities/${3656336289}?access_token=
+    8bf8609942377bb20e5b2131500f82a225f73c73`
     console.log(req.body) 
     axios.put(activityUrl,
       {
@@ -33,6 +34,7 @@ router.put('/', function(req, res) {
        
        name: req.body.name
       }).then(function(apiResponse) {
+
         res.redirect('/activities')
       })
     });

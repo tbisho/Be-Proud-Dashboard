@@ -17,7 +17,7 @@ const statsUrl = "https://www.strava.com/api/v3/athletes/47183122/stats"
 console.log('user id', req.currentUser)
 
 db.user.findByPk(req.user.id).then(function(response){
-  console.log('profile photo', response)
+  // console.log('profile photo', response)
   axios.get(statsUrl,
     {
       headers: {
