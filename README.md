@@ -22,18 +22,18 @@ I created this app to gain experience with Oauth authentication. I was able to u
 
 ### Wire Frames
 ![Landing](public/images/landingWire.png)
-![Profile](/images/profileWire.png)
-![Activity](/images/activityWire.png)
+![Profile](public/images/profileWire.png)
+![Activity](public/images/activityWire.png)
 
 ### Site Images
-![Login](/images/login.png)
-![Oauth](/images/oauth.png)
-![Activities](/images/activitiesPage.png)
+![Login](public/images/login.png)
+![Oauth](public/images/oauth.png)
+![Activities](public/images/activitiesPage.png)
 
 
 ### Code Captures
-![Strategy](/images/stravaStrategy.png)
-![Auth](/authRoute.png)
+![Strategy](public/images/stravaStrategy.png)
+![Auth](public/authRoute.png)
 
 ### About Me
 
