@@ -52,4 +52,18 @@ Add animations to make the user feel like it's a celebration
 
 ### Credits
 
-General Assembly instructors and classmates
+Shoutouts: 
+* Brock Whitbread-Cole 
+* James Sinkler
+* Uyen Lam
+
+Party Bus Crew:
+* Ashley Nguyen
+* Brock Molmen
+* Casey Jenkins
+* Jamie Cabrigas
+* Jane Cho
+* Kelsey Whallon
+* Lucy Franco
+
+* Nick Schmitt
