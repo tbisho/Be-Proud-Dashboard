@@ -7,6 +7,7 @@ I created this app to gain experience with Oauth authentication. I was able to u
 * Oauth with Passport
 * Express
 * Node.js
+* Postgres
 * Javascript
 * HTML & CSS
 
