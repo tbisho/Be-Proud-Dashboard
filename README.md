@@ -2,6 +2,13 @@
 
 I created this app to gain experience with Oauth authentication. I was able to utilize the Strava API to create a 'yearly roundup' of a Strava users activities. This dashboard is a fun way for me to look back at what I've accomplished for the year. I was inspired by Spotify's yearly promotion. 
 
+## Technologies Used
+
+Express
+Node.js
+Javascript
+HTML & CSS
+
 ## User Stories
 
 * As a user, I would like to be able to log in with my Strava credentials
