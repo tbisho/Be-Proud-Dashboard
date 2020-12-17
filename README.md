@@ -35,8 +35,6 @@ I created this app to gain experience with Oauth authentication. I was able to u
 ![Strategy](public/images/stravaStrategy.png)
 ![Auth](public/images/authRoute.png)
 
-### About Me
-
-### Future Developments
-
 ### Credits
+
+General Assembly instructors and classmates
