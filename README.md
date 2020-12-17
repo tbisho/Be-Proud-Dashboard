@@ -35,6 +35,12 @@ I created this app to gain experience with Oauth authentication. I was able to u
 ![Strategy](public/images/stravaStrategy.png)
 ![Auth](public/images/authRoute.png)
 
+### Future Developments
+
+Idenity what data would be most valuable to a user 
+Make the dashboard interactive 
+Add animations to make the user feel like it's a celebration 
+
 ### Credits
 
 General Assembly instructors and classmates
