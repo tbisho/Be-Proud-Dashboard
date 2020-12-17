@@ -4,10 +4,11 @@ I created this app to gain experience with Oauth authentication. I was able to u
 
 ## Technologies Used
 
-Express
-Node.js
-Javascript
-HTML & CSS
+* Oauth with Passport
+* Express
+* Node.js
+* Javascript
+* HTML & CSS
 
 ## User Stories
 
