@@ -1,6 +1,6 @@
 # Be Proud Dashboard
 
-I created this app to gain experience with Oauth authentication. I was able to utilize the Strava API to create a 'yearly roundup' of a Strava users activities.
+I created this app to gain experience with Oauth authentication. I was able to utilize the Strava API to create a 'yearly roundup' of a Strava users activities. This dashboard is a fun way for me to look back at what I've accomplished for the year. I was inspired by Spotify's yearly promotion. 
 
 ## User Stories
 
