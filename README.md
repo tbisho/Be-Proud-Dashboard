@@ -46,9 +46,9 @@ I created this app to gain experience with Oauth authentication. I was able to u
 
 ### Future Developments
 
-Idenity what data would be most valuable to a user 
-Make the dashboard interactive 
-Add animations to make the user feel like it's a celebration 
+* Identify what data would be most valuable to a user  
+* Add animations to make the user feel like it's a celebration 
+* Confetti.js ! 
 
 ### Credits
 
@@ -56,14 +56,5 @@ Shoutouts:
 * Brock Whitbread-Cole 
 * James Sinkler
 * Uyen Lam
-
-Party Bus Crew:
-* Ashley Nguyen
-* Brock Molmen
-* Casey Jenkins
-* Jamie Cabrigas
-* Jane Cho
-* Kelsey Whallon
-* Lucy Franco
-
+* Party Bus Crew
 * Nick Schmitt
